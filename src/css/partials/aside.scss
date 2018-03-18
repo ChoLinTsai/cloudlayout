@@ -1,0 +1,5 @@
+aside {
+	@include wh;
+	@include gridColRow(c1, c2, r3, r4);
+	background: powderblue;
+}

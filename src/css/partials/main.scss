@@ -1,0 +1,5 @@
+main {
+	@include wh;
+	@include gridColRow(c1, c2, r2, r3);
+	background: mistyrose;
+}

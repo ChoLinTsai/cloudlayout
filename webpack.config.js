@@ -134,7 +134,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Template Layout',
+      title: 'Cloud Layout',
       template: './src/index.html',
       hash: false,
       minify: {

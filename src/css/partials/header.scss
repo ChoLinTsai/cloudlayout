@@ -1,0 +1,51 @@
+header {
+	@include gridColRow(c2, c3, r1, r4);
+	display: grid;
+	grid-template-columns:
+		[c1] 1fr [c2];
+	grid-template-rows:
+		[r1] 75px [r2] 1fr [r3] 50px [r4];
+	background: #333;
+	color: #fff;
+
+	h1 {
+		@include wh;
+		@include gridColRow(c1, c2, r1, r2);
+		@include flex;
+		font-size: 2rem;
+		background: #212125;
+	}
+
+	ul#header-ul {
+		@include gridColRow(c1, c2, r2, r3);
+		display: grid;
+		grid-template-columns:
+			[c1] 1fr [c2];
+		grid-template-rows:
+			repeat(10, 75px);
+		li {
+			@include wh;
+			@include flex(flex-start, center);
+			font-size: 1.3rem;
+			&:hover {
+				cursor: pointer;
+				background: #00BBF0;
+				p {
+					transition: all 0.3s ease-in-out;
+					transform: translateX(10%);
+				}
+			}
+			p {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	section {
+		@include gridColRow(c1, c2, r3, r4);
+		@include gridItemPosition;
+		p {
+			color: #fff;
+		}
+	}
+}

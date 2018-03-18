@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include wh(normal, 100vw, 100vh);
+	font-family: 'roboto-bold';
+	display: grid;
+	grid-template-columns:
+		[c1] 1fr [c2] 250px [c3];
+	grid-template-rows:
+		[r1] 50px [r2] 1fr [r3] 250px [r4];
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
