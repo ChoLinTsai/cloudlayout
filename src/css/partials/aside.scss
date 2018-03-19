@@ -1,5 +1,135 @@
+$li-height: 70px;
+
 aside {
 	@include wh;
 	@include gridColRow(c1, c2, r3, r4);
-	background: powderblue;
+	display: grid;
+	grid-template-columns: [c1] 1fr [c2] 0.5rem [c3] 1fr [c4];
+	grid-template-rows: [r1] 1fr [r2];
+
+	section#my-info {
+		@include wh;
+		@include gridColRow(c1, c2, r1, r2);
+		background: #e1f5fe;
+		display: grid;
+		grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 125px [c5];
+		grid-template-rows: [r1] 125px [r2] 125px [r3];
+		grid-gap: 0.5rem;
+
+		div#fig-wrap {
+			@include wh;
+			@include gridColRow(c4, c5, r1, r2);
+			background: #03a9f4;
+			padding: 0.5rem;
+
+			figure#my-fig {
+				@include wh;
+				@include bgimg('../img/mario.jpg');
+				border-radius: 50%;
+			}
+		}
+
+		i.info-icon {
+			@include wh;
+			@include flex;
+			background: #03a9f4;
+			color: #fdfdfd;
+			font-size: 3rem;
+
+			p {
+				margin-left: 1rem;
+				font-size: 2rem;
+			}
+		}
+
+		i#bell {
+			@include gridColRow(c4, c5, r2, r3);
+		}
+
+		i#tool {
+			@include gridColRow(c3, c4, r1, r2);
+		}
+
+		i#doc {
+			@include gridColRow(c3, c4, r2, r3);
+		}
+
+		i#service {
+			@include gridColRow(c2, c3, r1, r2);
+		}
+
+		i#charge {
+			@include gridColRow(c2, c3, r2, r3);
+		}
+
+		i#lang {
+			@include gridColRow(c1, c2, r1, r2);
+		}
+
+		i#command {
+			@include gridColRow(c1, c2, r2, r3);
+		}
+	}
+
+	section#my-list {
+		@include wh;
+		@include gridColRow(c3, c4, r1, r2);
+		background: #e8f5e9;
+		display: grid;
+		grid-template-columns:
+			[c1] 200px [c2] 1fr [c3];
+		grid-template-rows:
+			[r1] 1fr [r2];
+		grid-column-gap: 0.5rem;
+
+		div#continent-list {
+			@include wh(max, 100%, 258px);
+			@include gridColRow(c1, c2, r1, r2);
+			display: grid;
+			grid-template-columns: [c1] 1fr [c2];
+			grid-template-rows: [r1] 1fr [r2];
+			overflow: hidden;
+			overflow-y: scroll;
+
+			ul#continent-ul {
+				@include wh;
+				@include gridColRow(c1, c2, r1, r2);
+				display: grid;
+				grid-template-columns: [c1] 1fr [c2];
+				grid-template-rows:
+				[r1] $li-height [r2] $li-height
+				[r3] $li-height [r4] $li-height
+				[r5] $li-height [r6] $li-height
+				[r7];
+				grid-row-gap: 0.5rem;
+
+				a.continent-a {
+					background: #2BBBAD;
+					text-decoration: none;
+					@include flex;
+
+					li {
+						font-size: 1.5rem;
+						color: #fdfdfd;
+					}
+				}
+
+				a#a-asia {
+					@include wh;
+					@include gridColRow(c1, c2, r1, r2);
+				}
+
+				a#a-europe {
+					@include wh;
+					@include gridColRow(c1, c2, r2, r3);
+				}
+			}
+		}
+
+		div#instance-list {
+			@include wh;
+			@include gridColRow(c2, c3, r1, r2);
+			background: #2BBBAD;
+		}
+	}
 }

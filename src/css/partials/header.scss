@@ -5,7 +5,7 @@ header {
 		[c1] 1fr [c2];
 	grid-template-rows:
 		[r1] 75px [r2] 1fr [r3] 50px [r4];
-	background: #333;
+	background: #2E2E2E;
 	color: #fff;
 
 	h1 {
@@ -23,6 +23,7 @@ header {
 			[c1] 1fr [c2];
 		grid-template-rows:
 			repeat(10, 75px);
+
 		li {
 			@include wh;
 			@include flex(flex-start, center);

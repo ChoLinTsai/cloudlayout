@@ -51,12 +51,15 @@ section#search-section {
 		}
 	}
 
-	button#adv-search {
+	a#adv-search {
 		@include wh;
 		@include gridColRow(c3, c4, r1, r2);
-		background: #005792;
+		background: #03a9f4;
 		color: #fdfdfd;
 		border: 0;
+		&:hover {
+			background: #2393f0;
+		}
 		&:focus {
 			outline: 0;
 		}
@@ -68,7 +71,7 @@ section#search-section {
 		background: #00BBF0;
 		text-decoration: none;
 		&:hover {
-			background: #F8B195;
+			background: #00C851;
 		}
 		i {
 			font-size: 1.5rem;
