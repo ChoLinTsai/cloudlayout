@@ -76,10 +76,8 @@ aside {
 		@include gridColRow(c3, c4, r1, r2);
 		background: #e8f5e9;
 		display: grid;
-		grid-template-columns:
-			[c1] 200px [c2] 1fr [c3];
-		grid-template-rows:
-			[r1] 1fr [r2];
+		grid-template-columns: [c1] 200px [c2] 1fr [c3];
+		grid-template-rows: [r1] 1fr [r2];
 		grid-column-gap: 0.5rem;
 
 		div#continent-list {
@@ -96,11 +94,7 @@ aside {
 				@include gridColRow(c1, c2, r1, r2);
 				display: grid;
 				grid-template-columns: [c1] 1fr [c2];
-				grid-template-rows:
-				[r1] $li-height [r2] $li-height
-				[r3] $li-height [r4] $li-height
-				[r5] $li-height [r6] $li-height
-				[r7];
+				grid-template-rows: [r1] $li-height [r2] $li-height [r3] $li-height [r4] $li-height [r5] $li-height [r6] $li-height [r7];
 				grid-row-gap: 0.5rem;
 
 				a.continent-a {
@@ -127,9 +121,48 @@ aside {
 		}
 
 		div#instance-list {
-			@include wh;
+			@include wh(max, 100%, 258px);
 			@include gridColRow(c2, c3, r1, r2);
-			background: #2BBBAD;
+			display: grid;
+			grid-template-columns: [c1] 1fr [c2];
+			grid-template-rows: [r1] 1fr [r2];
+			overflow: hidden;
+			overflow-y: scroll;
+
+			ul#instance-ul {
+				@include wh;
+				@include gridColRow(c1, c2, r1, r2);
+				display: grid;
+				grid-template-columns:
+					[c1] 125px [c2] 125px [c3] 125px
+					[c4] 125px [c5] 1fr [c6];
+				grid-template-rows:
+					[r1] 50px [r2] 50px [r3] 1fr [r4];
+				grid-gap: 0.5rem;
+
+				li.instance-li {
+					background: #2BBBAD;
+					color: #fdfdfd;
+					@include flex;
+					font-size: 1.25rem;
+				}
+
+				li#taiwan {
+					@include wh;
+					@include gridColRow(c1, c2, r1, r2);
+				}
+
+				li#japan {
+					@include wh;
+					@include gridColRow(c2, c3, r1, r2);
+				}
+
+				li#korea{
+					@include wh;
+					@include gridColRow(c3, c4, r1, r2);
+				}
+			}
+
 		}
 	}
 }
