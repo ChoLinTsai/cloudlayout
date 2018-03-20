@@ -3,15 +3,10 @@ main {
 	@include gridColRow(c1, c2, r2, r3);
 	background: #FCFCFC;
 	display: grid;
-	grid-template-columns:
-		[c1] 1rem [c2] 1fr [c3] 1rem [c4] 300px
-		[c5] 1rem [c6] 300px [c7] 1rem [c8];
-	grid-template-rows:
-		[r1] 1rem [r2] 300px [r3] 1rem [r4] 300px
-		[r5] 1rem [r6];
+	grid-template-columns: [c1] 1rem [c2] 1fr [c3] 1rem [c4] 300px [c5] 1rem [c6] 300px [c7] 1rem [c8];
+	grid-template-rows: [r1] 1rem [r2] 300px [r3] 1rem [r4] 300px [r5] 1rem [r6];
 
-
-	figure.figs{
+	figure.figs {
 		@include wh;
 		box-shadow: 0.5px 0.5px 5px #333;
 	}
@@ -19,7 +14,6 @@ main {
 	figure#main-fig {
 		@include gridColRow(c2, c3, r2, r5);
 		@include bgimg('../img/simple-chart.jpg');
-
 	}
 
 	figure#chart-1 {
@@ -41,5 +35,4 @@ main {
 		@include gridColRow(c6, c7, r4, r5);
 		@include bgimg('../img/donutchart.jpg');
 	}
-
 }

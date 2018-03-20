@@ -133,11 +133,8 @@ aside {
 				@include wh;
 				@include gridColRow(c1, c2, r1, r2);
 				display: grid;
-				grid-template-columns:
-					[c1] 125px [c2] 125px [c3] 125px
-					[c4] 125px [c5] 1fr [c6];
-				grid-template-rows:
-					[r1] 50px [r2] 50px [r3] 1fr [r4];
+				grid-template-columns: [c1] 125px [c2] 125px [c3] 125px [c4] 125px [c5] 1fr [c6];
+				grid-template-rows: [r1] 50px [r2] 50px [r3] 1fr [r4];
 				grid-gap: 0.5rem;
 
 				li.instance-li {
@@ -157,12 +154,11 @@ aside {
 					@include gridColRow(c2, c3, r1, r2);
 				}
 
-				li#korea{
+				li#korea {
 					@include wh;
 					@include gridColRow(c3, c4, r1, r2);
 				}
 			}
-
 		}
 	}
 }
